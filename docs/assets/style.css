@@ -1,7 +1,9 @@
-
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0a192f;
+  background-color: #112240;
   color: #ccd6f6;
   line-height: 1.6;
   margin: 0;
@@ -9,38 +11,85 @@ body {
 }
 
 a {
-  color: #64ffda;
+  color: #ff9900;
+  text-decoration: none;
 }
 
+a:hover {
+  color: #ff9900;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+h1, h2, h3, h4 {
+  color: #ff9900;
+}
+
+.roles,
+.student {
+  color: #8892b0;
+  margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   LAYOUT CONTAINERS
+   ========================================================================== */
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
 }
 
+section {
+  margin-top: 2rem;
+}
+
+.section-divider {
+  border: none;
+  border-top: 5px solid #233554;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
 header.intro {
-  background-color: #112240;
+  background-color: #0a192f;
   padding: 2rem;
   text-align: center;
 }
 
-.roles, .student {
-  color: #8892b0;
-  margin-top: 0.5rem;
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-section {
-  margin-top: 3rem;
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #ff9900;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-h1, h2, h3 {
-  color: #64ffda;
+.header-text {
+  max-width: 600px;
 }
 
-h4 {
-  color: #64ffda;
+.header-text h1 {
+  margin-bottom: 0.5rem;
 }
 
+/* ==========================================================================
+   EXPERIENCE SECTION
+   ========================================================================== */
 .experience-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -70,10 +119,14 @@ h4 {
 
 .exp-right p {
   margin-top: 0;
+  text-align: justify;
 }
 
+/* ==========================================================================
+   TABLES - GENERAL
+   ========================================================================== */
 table {
-  width: 25%;
+  width: 40%;
   border-collapse: collapse;
   margin-top: 1rem;
   font-size: 0.9rem;
@@ -81,20 +134,22 @@ table {
 
 table thead {
   background-color: #112240;
+  text-align: left;
+  border-bottom: 5px solid #233554;
 }
 
 table th {
-  color: #64ffda;
+  color: #ff9900;
   width: 70%;
 }
 
 table td {
   color: #ffffff;
-  border: 1px solid #233554;
   padding: 0.2rem;
   text-align: left;
   vertical-align: middle;
   width: 30%;
+  border: none;
 }
 
 table td img {
@@ -102,36 +157,43 @@ table td img {
   vertical-align: middle;
 }
 
+table tbody tr {
+  border-bottom: 2px solid #233554;
+}
 
+/* ==========================================================================
+   TABLES - PROJECTS
+   ========================================================================== */
 table.projects {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 table.projects thead {
-  border-bottom: 1px solid #233554;
+  border-bottom: 5px solid #233554;
+  background-color: #112240;
 }
 
-table.projects th, table.projects td {
-  padding: 0.75rem;
-  border: 1px solid #233554;
+table.projects th,
+table.projects td {
+  padding: 0.5rem;
   vertical-align: middle;
   text-align: left;
   color: #ccd6f6;
   border: none;
 }
 
-table.projects tbody tr {
-  border-bottom: 1px solid #233554;
-}
-
 table.projects th {
-  background-color: #112240;
-  color: #64ffda;
+  color: #ff9900;
 }
 
+table.projects tbody tr {
+  border-bottom: 2px solid #233554;
+}
+
+/* Column widths */
 .col-year {
   width: 10%;
   min-width: 60px;
@@ -141,23 +203,75 @@ table.projects th {
   width: 50%;
 }
 
-.col-company {
-  width: 20%;
-}
-
+.col-company,
 .col-tech {
   width: 20%;
 }
 
-/* Estilo para las tecnologías tipo etiqueta */
+/* ==========================================================================
+   TAGS Y ETIQUETAS
+   ========================================================================== */
 .tech-tag {
   display: inline-block;
   background-color: rgba(100, 255, 218, 0.1);
-  color: #64ffda;
+  color: #ff9900;
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
   margin: 0.2rem;
   border-radius: 4px;
   font-family: monospace;
   white-space: nowrap;
+}
+
+/* ==========================================================================
+   CONTACT SECTION
+   ========================================================================== */
+.contact-table {
+  width: auto;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+.contact-table td {
+  border-left: 4px solid #233554;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.contact-table tr {
+  border: none;
+}
+
+.contact-table td:first-child {
+  border-left: none;
+}
+
+.contact-table img.icon {
+  height: 32px;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.contact-table img.icon:hover {
+  transform: scale(1.1);
+}
+
+.contact-table span {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  color: #ccd6f6;
+}
+
+/* ==========================================================================
+   ICONOS
+   ========================================================================== */
+.icon {
+  margin-right: 10px;
+  color: #ff9900;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
 }
