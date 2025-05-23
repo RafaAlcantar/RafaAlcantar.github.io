@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,18 +9,21 @@
 </head>
 <body>
 <header class="intro">
+  <div class="language-switcher">
+    <button id="lang-toggle" onclick="toggleLanguage()">Español</button>
+  </div>
   <div class="container header-flex">
     <img src="assets/images/profile_image.png" alt="Rafael Alcantar" class="profile-pic" />
     <div class="header-text">
       <h1>Rafael Alcantar Juárez</h1>
-      <p class="roles">💻 Software Engineer | 📊 ML Engineer | 📹 Machine Vision Engineer</p>
-      <p class="student">🧑‍🎓 Estudiante en Udemy, Platzi, LinkedIn Learning y Santander Open Academy</p>
+      <p class="roles" id="roles">💻 Software Engineer | 📊 ML Engineer | 📹 Machine Vision Engineer</p>
+      <p class="student" id="student">🧑‍🎓 Estudiante en Udemy, Platzi, LinkedIn Learning y Santander Open Academy</p>
     </div>
   </div>
 </header>
   <main class="container">
     <section>
-        <h2>Contacto:</h2>
+        <h2 id="contact">Contact</h2>
         <table class="contact-table">
             <tr>
             <td>
@@ -41,112 +44,184 @@
             </tr>
         </table>
     </section>
+
     <hr class="section-divider">
+
     <section class="exp-right">
-      <h2>Sobre mí</h2>
-        <p>Ingeniero de Software con más de 11 años de experiencia desarrollando soluciones tecnológicas complejas en sectores como la industria automotriz y aeroespacial. Especialista en programación orientada a objetos utilizando C#, C++, Python y Java, aplicando consistentemente estándares de calidad, principios SOLID, y prácticas de Clean Code para garantizar software mantenible y eficiente.</p>
-        <p>He diseñado y desarrollado software para visión por computadora, realidad aumentada, inteligencia artificial e inspección 3D, contribuyendo significativamente a la automatización y mejora de procesos industriales. Me destaco por liderar el desarrollo de aplicaciones robustas utilizando el stack de Microsoft .NET, frameworks de visión como OpenCV, y bases de datos como MySQL y PostgreSQL.</p>
-        <p>Apasionado por la mejora continua, el trabajo colaborativo en equipos ágiles (Scrum) y la innovación tecnológica, busco aportar soluciones de alto impacto técnico que eleven la calidad del producto y la satisfacción del usuario.</p>
+      <h2 id="about">Sobre mí</h2>
+        <p id="aboutText1">Ingeniero de Software con más de 11 años de experiencia desarrollando soluciones tecnológicas complejas en sectores como la industria automotriz y aeroespacial. Especialista en programación orientada a objetos utilizando C#, C++, Python y Java, aplicando consistentemente estándares de calidad, principios SOLID, y prácticas de Clean Code para garantizar software mantenible y eficiente.</p>
+        <p id="aboutText2">He diseñado y desarrollado software para visión por computadora, realidad aumentada, inteligencia artificial e inspección 3D, contribuyendo significativamente a la automatización y mejora de procesos industriales. Me destaco por liderar el desarrollo de aplicaciones robustas utilizando el stack de Microsoft .NET, frameworks de visión como OpenCV, y bases de datos como MySQL y PostgreSQL.</p>
+        <p id="aboutText3">Apasionado por la mejora continua, el trabajo colaborativo en equipos ágiles (Scrum) y la innovación tecnológica, busco aportar soluciones de alto impacto técnico que eleven la calidad del producto y la satisfacción del usuario.</p>
     </section>
     <hr class="section-divider">
     <section>
-      <h2>Experiencia Laboral</h2>
-      <div class="experience-grid">
+      <h2 id="experience">Experiencia Laboral</h2>  
+      <div class="experience-grid" id="exp-1">
         <div class="exp-left">
-          <h3>Ingeniero de Software</h3>
-          <p class="company">
-              3D INFOTECH
-          </p>
-          <p class="location-date">Ciudad de México | Jun 2015 – Ene 2025</p>
+          <h3 id="exp-title-1">Ingeniero de Software</h3>
+          <p class="company" id="exp-company-1">3D INFOTECH</p>
+          <p class="location-date" id="exp-date-1">Ciudad de México | Jun 2015 – Ene 2025</p>
         </div>
         <div class="exp-right">
-          <p>
+          <p id="exp-desc-1">
             Lideré el desarrollo de soluciones de visión por computadora y realidad aumentada para automatización, inspección dimensional y asistencia robótica en entornos industriales. Trabajé con C#, C++, Python y Java, usando OpenCV, EMGU CV, Eyeshot y MathNet. Diseñé plugins para SolidWorks y PolyWorks, optimizando procesos de ingeniería inversa y reduciendo significativamente los tiempos de inspección en sectores automotriz y aeroespacial.
           </p>
         </div>
       </div>
-      <div class="experience-grid">
+      <div class="experience-grid" id="exp-2">
         <div class="exp-left">
-          <h3>Ingeniero de Software</h3>
-          <p class="company">Global Corporation</p>
-          <p class="location-date">Ciudad de México | Abr 2013 – May 2015</p>
+          <h3 id="exp-title-2">Ingeniero de Software</h3>
+          <p class="company" id="exp-company-2">Global Corporation</p>
+          <p class="location-date" id="exp-date-2">Ciudad de México | Abr 2013 – May 2015</p>
         </div>
         <div class="exp-right">
-          <p>
+          <p id="exp-desc-2">
             Desarrollé sistemas de visión artificial para seguridad urbana, monitoreo en tiempo real y reconocimiento de caracteres (OCR), utilizando C++, C#, PHP y técnicas de machine learning.
             Administré servidores de video streaming y lideré un equipo de I+D enfocado en calidad de software y eficiencia en el manejo de datos con MySQL y PostgreSQL.
           </p>
         </div>
       </div>
-      <div class="experience-grid">
+      <div class="experience-grid" id="exp-3">
         <div class="exp-left">
-          <h3>Investigador Visitante</h3>
-          <p class="company">Universidad Rey Juan Carlos</p>
-          <p class="location-date">Móstoles, España | Ene – Abr 2012</p>
+          <h3 id="exp-title-3">Investigador Visitante</h3>
+          <p class="company" id="exp-company-3">Universidad Rey Juan Carlos</p>
+          <p class="location-date" id="exp-date-3">Móstoles, España | Ene – Abr 2012</p>
         </div>
         <div class="exp-right">
-          <p>
+          <p id="exp-desc-3">
             Desarrollé un sistema de análisis visual para detectar comportamientos sospechosos en estacionamientos, como parte de mi tesis de maestría en IA, aplicando algoritmos de visión por computadora y análisis de movimiento.
           </p>
         </div>
       </div>
-      <div class="experience-grid">
+
+      <div class="experience-grid" id="exp-4">
         <div class="exp-left">
-          <h3>Profesor de Computación</h3>
-          <p class="company">Colegio English COM</p>
-          <p class="location-date">Cuautla, Morelos | Ago 2009 – Feb 2011</p>
+          <h3 id="exp-title-4">Profesor de Computación</h3>
+          <p class="company" id="exp-company-4">Colegio English COM</p>
+          <p class="location-date" id="exp-date-4">Cuautla, Morelos | Ago 2009 – Feb 2011</p>
         </div>
         <div class="exp-right">
-          <p>
+          <p id="exp-desc-4">
             Impartí cursos de programación web, diseño digital y ofimática. Diseñé planes de estudio prácticos en PHP, MySQL, Photoshop y Office, fomentando el desarrollo técnico y lógico de los estudiantes.
           </p>
         </div>
       </div>
-      <div class="experience-grid">
+
+      <div class="experience-grid" id="exp-5">
         <div class="exp-left">
-          <h3>Residente Programador</h3>
-          <p class="company">Continental</p>
-          <p class="location-date">Cuautla, Morelos | Nov 2008 – May 2009</p>
+          <h3 id="exp-title-5">Residente Programador</h3>
+          <p class="company" id="exp-company-5">Continental</p>
+          <p class="location-date" id="exp-date-5">Cuautla, Morelos | Nov 2008 – May 2009</p>
         </div>
         <div class="exp-right">
-          <p>
+          <p id="exp-desc-5">
             Desarrollé un sistema web para gestión ambiental y registro de incidentes médicos, usando PHP y MySQL. Mejoré la trazabilidad de datos y optimicé procesos en el área de seguridad e higiene industrial.
           </p>
         </div>
       </div>
     </section>
+
+    <hr class="section-divider">
     <section>
-      <h2>Proyectos</h2>
+      <h2 id="projects">Proyectos</h2>
+
       <table class="projects">
         <thead>
           <tr>
-            <th class="col-year">Año</th>
-            <th class="col-project">Proyecto</th>
-            <th class="col-company">Empresa</th>
-            <th class="col-tech">Tecnologías</th>
+            <th id="year" class="col-year">Año</th>
+            <th id="project" class="col-project">Proyecto</th>
+            <th id="company" class="col-company">Empresa</th>
+            <th id="tech" class="col-tech">Tecnologías</th>
           </tr>
         </thead>
-       <tbody>
-          <tr><td>2023-2024</td><td>Spotlight AR++ Dynamic Projection</td><td>3D Infotech</td><td><span class="tech-tag">C++</span><span class="tech-tag">C#</span><span class="tech-tag">OpenCV</span><span class="tech-tag">PolyWorks</span></td></tr>
-          <tr><td>2019-2022</td><td>Spotlight AR++</td><td>3D Infotech</td><td><span class="tech-tag">C++</span></span><span class="tech-tag">C#</span><span class="tech-tag">OpenCV</span><span class="tech-tag">PolyWorks</span></td></tr>
-          <tr><td>2018</td><td>Visual Brackets Verification</td><td>3D Infotech</td><td><span class="tech-tag">C++</span><span class="tech-tag">C#</span><span class="tech-tag">EMGU CV</span></td></tr>
-          <tr><td>2017</td><td>Aruna Vision</td><td>3D Infotech</td><td><span class="tech-tag">Python</span> <span class="tech-tag">Java</span><span class="tech-tag">Linux</span><span class="tech-tag">OpenCV</span></td></tr>
-          <tr><td>2016</td><td>Part ID</td><td>3D Infotech</td><td><span class="tech-tag">C++</span><span class="tech-tag">C#</span><span class="tech-tag">EMGU CV</span></td></tr>
-          <tr><td>2015</td><td>Karbon</td><td>3D Infotech</td><td><span class="tech-tag">C++</span><span class="tech-tag">C#</span><span class="tech-tag">OpenCV</span><span class="tech-tag">SolidWorks</span></td></tr>
-          <tr><td>2015</td><td>Detección y seguimiento de personas en tiendas departamentales</td><td>Global Corporation</td><td><span class="tech-tag">C#</span><span class="tech-tag">OpenCV</span><span class="tech-tag">C++</span></td></tr>
-          <tr><td>2014</td><td>Detección, seguimiento y estimación de velocidad de autos en carretereas</td><td>Global Corporation</td><td><span class="tech-tag">Java</span><span class="tech-tag">OpenCV</span><span class="tech-tag">C++</span></td></tr>
-          <tr><td>2014</td><td>Reconocimiento de placas</td><td>Global Corporation</td><td><span class="tech-tag">C#</span><span class="tech-tag">OpenCV</span><span class="tech-tag">C++</span> <span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span></td></tr>
-          <tr><td>2013</td><td>OCR con Red Neuronal</td><td>Global Corporation</td><td><span class="tech-tag">OpenCV</span><span class="tech-tag">C++</span></td></tr>
-          <tr><td>2011</td><td>Movimientos Sospechosos</td><td>Cenidet, URJC</td><td><span class="tech-tag">C++</span></td></tr>
-          <tr><td>2008</td><td>Gestión ambiental y médica</td><td>Continental, ITC</td><td><span class="tech-tag">PHP</span> <span class="tech-tag">Javascript</span><span class="tech-tag">MySQL</span></td></tr>
+        <tbody>
+          <tr>
+            <td>2023-2024</td>
+            <td id="project-1">Spotlight AR++ Dynamic Projection</td>
+            <td>3D Infotech</td>
+            <td>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">PolyWorks</span>
+            </td>
+          </tr>
+          <tr>
+            <td>2019-2022</td>
+            <td id="project-2">Spotlight AR++</td>
+            <td>3D Infotech</td>
+            <td><span class="tech-tag">C++</span><span class="tech-tag">C#</span><span class="tech-tag">OpenCV</span><span class="tech-tag">PolyWorks</span></td>
+          </tr>
+          <tr>
+            <td>2018</td>
+            <td id="project-3">Visual Brackets Verification</td>
+            <td>3D Infotech</td>
+            <td><span class="tech-tag">C++</span><span class="tech-tag">C#</span><span class="tech-tag">EMGU CV</span></td>
+          </tr>
+          <tr>
+            <td>2017</td>
+            <td id="project-4">Aruna Vision</td>
+            <td>3D Infotech</td>
+            <td><span class="tech-tag">Python</span><span class="tech-tag">Java</span><span class="tech-tag">Linux</span><span class="tech-tag">OpenCV</span></td>
+          </tr>
+          <tr>
+            <td>2016</td>
+            <td id="project-5">Part ID</td>
+            <td>3D Infotech</td>
+            <td><span class="tech-tag">C++</span><span class="tech-tag">C#</span><span class="tech-tag">EMGU CV</span></td>
+          </tr>
+          <tr>
+            <td>2015</td>
+            <td id="project-6">Karbon</td>
+            <td>3D Infotech</td>
+            <td><span class="tech-tag">C++</span><span class="tech-tag">C#</span><span class="tech-tag">OpenCV</span><span class="tech-tag">SolidWorks</span></td>
+          </tr>
+          <tr>
+            <td>2015</td>
+            <td id="project-7">Detección y seguimiento de personas en tiendas departamentales</td>
+            <td>Global Corporation</td>
+            <td><span class="tech-tag">C#</span><span class="tech-tag">OpenCV</span><span class="tech-tag">C++</span></td>
+          </tr>
+          <tr>
+            <td>2014</td>
+            <td id="project-8">Detección, seguimiento y estimación de velocidad de autos en carretereas</td>
+            <td>Global Corporation</td>
+            <td><span class="tech-tag">Java</span><span class="tech-tag">OpenCV</span><span class="tech-tag">C++</span></td>
+          </tr>
+          <tr>
+            <td>2014</td>
+            <td id="project-9">Reconocimiento de placas</td>
+            <td>Global Corporation</td>
+            <td><span class="tech-tag">C#</span><span class="tech-tag">OpenCV</span><span class="tech-tag">C++</span><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span></td>
+          </tr>
+          <tr>
+            <td>2013</td>
+            <td id="project-10">OCR con Red Neuronal</td>
+            <td>Global Corporation</td>
+            <td><span class="tech-tag">OpenCV</span><span class="tech-tag">C++</span></td>
+          </tr>
+          <tr>
+            <td>2011</td>
+            <td id="project-11">Movimientos Sospechosos</td>
+            <td>Cenidet, URJC</td>
+            <td><span class="tech-tag">C++</span></td>
+          </tr>
+          <tr>
+            <td>2008</td>
+            <td id="project-12">Gestión ambiental y médica</td>
+            <td>Continental, ITC</td>
+            <td><span class="tech-tag">PHP</span><span class="tech-tag">Javascript</span><span class="tech-tag">MySQL</span></td>
+          </tr>
+
         </tbody>
       </table>
     </section>
+    
     <section>
-      <h2>Lenguajes y Tecnologías</h2>
+      <h2 id="skills">Lenguajes y Tecnologías</h2>
       <table>
         <thead>
-          <tr><th>Tecnología</th><th>Dominio</th></tr>
+          <tr><th id="technology">Tecnología</th><th id="proficiency">Dominio</th></tr>
         </thead>
         <tbody>
           <tr><td>C# / .NET</td><td>⭐⭐⭐⭐☆</td></tr>
@@ -171,23 +246,23 @@
       </table>
     </section>
     <section>
-      <h2>Educación</h2>
-      <ul>
+      <h2 id="education">Educación</h2>
+      <ul id="education-list">
         <li><strong>Maestro en Ciencias en Ciencias de la Computación</strong> – CENIDET (2010–2013)</li>
         <li><strong>Investigador visitante</strong> – Universidad Rey Juan Carlos (2012)</li>
         <li><strong>Ingeniero en Sistemas Computacionales</strong> – IT de Cuautla (2004–2009)</li>
       </ul>
     </section>
     <section>
-      <h2>Idiomas</h2>
-      <ul>
+      <h2 id="languages">Idiomas</h2>
+      <ul id="languages-list">
         <li><strong>Español:</strong> Nativo</li>
         <li><strong>Inglés:</strong> Intermedio</li>
       </ul>
     </section>
     <section>
-      <h2>Fortalezas</h2>
-      <ul>
+      <h2 id="strengths">Fortalezas</h2>
+      <ul id="strengths-list">
         <li>Resolución de problemas</li>
         <li>Pensamiento crítico y analítico</li>
         <li>Trabajo en equipo y colaboración</li>
@@ -197,15 +272,15 @@
       </ul>
     </section>
     <section>
-      <h2>Certificaciones</h2>
-      <ul>
+      <h2 id="certifications">Certificaciones</h2>
+      <ul id="certifications-list">
         <li>📜 AWS Certified Cloud Practitioner (En curso)</li>
-        <li>📚 Cursos: Udemy, Platzi, Santander Scholarships, LinkedIn Learning</li>
+        <li>📚 Cursos: Udemy, Platzi, Santander Open Academy, LinkedIn Learning</li>
       </ul>
     </section>
     <section>
-      <h2>Actualmente Aprendiendo</h2>
-      <ul>
+      <h2 id="learning">Actualmente Aprendiendo</h2>
+      <ul id="learning-list">
         <li>AWS Cloud Practitioner</li>
         <li>🤖 TensorFlow – Deep learning y redes neuronales</li>
         <li>🐘 PostgreSQL – Consultas avanzadas en SQL</li>
@@ -214,5 +289,6 @@
       </ul>
     </section>
   </main>
+  <script src="assets/script.js"></script>
 </body>
 </html>
