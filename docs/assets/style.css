@@ -52,6 +52,13 @@ section {
   width: 100%;
 }
 
+.section-divider-simple {
+  border: none;
+  border-bottom: 2px solid #233554;
+  margin: 1rem 0;
+  width: 100%;
+}
+
 
 /* ==========================================================================
    HEADER
@@ -94,7 +101,7 @@ header.intro {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   align-items: start;
 }
 
@@ -104,7 +111,7 @@ header.intro {
 
 .exp-left h3 {
   color: #ccd6f6;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
 }
 
 .exp-left .company {
@@ -275,3 +282,27 @@ table.projects tbody tr {
   text-align: center;
   vertical-align: middle;
 }
+
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.language-switcher button {
+  background-color: #0a192f;
+  border: 1px solid white;
+  color: #8892b0;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.language-switcher button.active-language {
+  background-color: #112240;
+}
+
+
